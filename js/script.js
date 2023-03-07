@@ -16,7 +16,7 @@ $(window).on('load resize', function () {
     var window_height = window.innerHeight ? window.innerHeight : $(window).innerHeight();
     var window_width = window.innerWidth ? window.innerWidth : $(window).width();
     if (window_width <= 768) {
-        $('.top').css('height',  window_height + 'px');
+        $('.top').css('height', window_height + 'px');
     } else {
         $('.top').css('height', '85vh');
     }
@@ -163,9 +163,9 @@ $(function () {
 });
 
 $(window).scroll(function () {
-        if ($(this).scrollTop() > 400) {
-            $('.header').addClass('is-active')
-        } else {
-            $('.header').removeClass('is-active')
-        }
-    });
+    if ($(this).scrollTop() > 400) {
+        $('.header').addClass('is-active')
+    } else {
+        $('.header').removeClass('is-active')
+    }
+});

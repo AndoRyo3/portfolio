@@ -250,9 +250,6 @@ img {
         display: block;
         z-index: 1000;
       }
-      .plate1{
-        display: block;
-      }
       .burger {
         filter: url(#gooeyness);
       }
@@ -309,6 +306,7 @@ img {
         transform: translateY(0);
         opacity: 1;
     }
+    
 }
 
 
