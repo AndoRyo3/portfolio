@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
-    <link rel="icon" href="/static/favicon.ico">
+    <link rel="icon" href="/static/icons8-ハート-48.png">
     <link href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -23,6 +23,22 @@
 </head>
 
 <body>
+    <!-- Loading -->
+    <div id="js-loading" class="loading">
+        <div class="intersecting-circles-spinner">
+            <div class="spinnerBlock">
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+            </div>
+            <p class="loading-txt">Loading</p>
+        </div>
+    </div>
+
     <!-- header -->
     <header id="header">
         <div class="header">
@@ -31,6 +47,7 @@
                 <ul class="header-ul">
                     <li><a href="#works" class="header-link">works</a></li>
                     <li><a href="#profile" class="header-link">profile</a></li>
+                    <li><a href="#skils" class="header-link">skils</a></li>
                 </ul>
             </nav>
 
@@ -38,6 +55,7 @@
                 <ul>
                     <li><a href="#works" class="sp-link">works</a></li>
                     <li><a href="#profile" class="sp-link">profile</a></li>
+                    <li><a href="#skils" class="sp-link">skils</a></li>
                 </ul>
             </nav>
 
@@ -189,7 +207,7 @@
             </div>
         </section>
 
-        <section id="skil">
+        <section id="skils">
             <div class="container">
                 <h1 class="section-title js-fadein">skils</h1>
                 <!-- Slider main container -->
@@ -304,8 +322,13 @@
     <footer id="footer">
         <div class="footer">
             <small>Copyright © 2023 Ryo Portfolio All rights reserved.</small>
+            <p class="icon-link"><a target="_blank"
+                    href="https://icons8.com/icon/80493/%E3%83%8F%E3%83%BC%E3%83%88">ハート</a> icon by <a target="_blank"
+                    href="https://icons8.com">Icons8</a></p>
         </div>
     </footer>
+
+    <p id="page-top"><a href="#"><i class="fa-regular fa-arrow-up"></i></a></p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
