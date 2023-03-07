@@ -8,9 +8,7 @@
     <title>Ryo's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo:wght@500;600;700&amp;family=Noto+Sans+JP:wght@500;900&amp;display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500;600;700&amp;family=Noto+Sans+JP:wght@500;900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -51,6 +49,7 @@
                 </ul>
             </nav>
 
+            <!-- hamburger-menu -->
             <nav class="sp-nav">
                 <ul>
                     <li><a href="#works" class="sp-link">works</a></li>
@@ -79,6 +78,7 @@
 
     <!-- main -->
     <main>
+        <!-- mainvisual section -->
         <section id="top">
             <div class="top">
                 <ul class="mv-ul">
@@ -94,6 +94,7 @@
             </div>
         </section>
 
+        <!-- works section -->
         <section id="works">
             <div class="container">
                 <h1 class="section-title js-fadein">works</h1>
@@ -155,7 +156,7 @@
                         <div class="description">
                             <h1>PON DESIGN</h1>
                             <div class="text">
-                                <p>各ページ遷移可能なコーポレートサイト。<br>PC・スマートフォンに対応。</p>
+                                <p>ページ遷移可能なコーポレートサイト。<br>PC・スマートフォンに対応。</p>
                                 <a href="https://pd-publishedby-ryo3ando.netlify.app" rel="noreferrer noopener"
                                     target="_blank">Move Site</a>
                             </div>
@@ -186,6 +187,7 @@
             </div>
         </section>
 
+        <!-- profile section -->
         <section id="profile">
             <div class="container">
                 <h1 class="section-title js-fadein">profile</h1>
@@ -200,13 +202,14 @@
                         <p>あはははははは</p>
                         <div class="sns-link">
                             <i class="fa-brands fa-instagram"></i>
-                            <a rel="noreferrer noopener" href="" target="_blank">Instagram</a>
+                            <a rel="noreferrer noopener" href="https://www.instagram.com/" target="_blank">Instagram</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- skils section -->
         <section id="skils">
             <div class="container">
                 <h1 class="section-title js-fadein">skils</h1>
@@ -321,13 +324,21 @@
     <!-- footer -->
     <footer id="footer">
         <div class="footer">
-            <small>Copyright © 2023 Ryo Portfolio All rights reserved.</small>
-            <p class="icon-link"><a target="_blank"
-                    href="https://icons8.com/icon/80493/%E3%83%8F%E3%83%BC%E3%83%88">ハート</a> icon by <a target="_blank"
-                    href="https://icons8.com">Icons8</a></p>
+            <nav>
+                <ul class="footer-ul">
+                    <li><a href="#works" class="footer-link">works</a></li>
+                    <li><a href="#profile" class="footer-link">profile</a></li>
+                    <li><a href="#skils" class="footer-link">skils</a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <small>Copyright © 2023 Ryo Portfolio All rights reserved.</small>
+                <p class="icon-link"><a target="_blank" href="https://icons8.com/icon/80493/%E3%83%8F%E3%83%BC%E3%83%88">ハート</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+            </div>
         </div>
     </footer>
 
+    <!-- pagetop-btn -->
     <p id="page-top"><a href="#"><i class="fa-regular fa-arrow-up"></i></a></p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
