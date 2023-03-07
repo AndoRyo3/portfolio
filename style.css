@@ -257,6 +257,7 @@ img {
         transform-origin: 50%;
         transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms,
           transform 500ms 200ms;
+        display: block;
       }
       .x .line {
         stroke-width: 5.5px;
@@ -866,6 +867,7 @@ img {
 
 .copyright{
     padding: 30px 0;
+    background-color: #000;
 }
 
 
