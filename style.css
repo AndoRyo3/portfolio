@@ -242,6 +242,9 @@ img {
         display: block;
         z-index: 1000;
       }
+      .plate1{
+        display: block;
+      }
       .burger {
         filter: url(#gooeyness);
       }
