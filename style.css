@@ -61,6 +61,10 @@ img {
     display: none;
 }
 
+.sp-link{
+    text-transform: uppercase;
+}
+
 @media screen and (max-width:599px) {
     .header{
         padding: 10px 15px;
