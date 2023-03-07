@@ -235,7 +235,15 @@ img {
         width: 40px;
         cursor: pointer;
         display: block;
-      }
+    }
+    _::-webkit-full-page-media, _:future, :root svg{
+        height: 40px;
+        position: absolute;
+        width: 40px;
+        cursor: pointer;
+        display: block;
+    }
+    
       .plate {
         height: 41px;
         width: 41px;
