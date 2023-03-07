@@ -203,6 +203,22 @@ img {
     position: relative;
 }
 
+.mv-ul li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 50% 50%/0 0 20% 20%;
+}
+
+.mv-ul li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
 .top-title{
     position: absolute;
     top: 50%;
@@ -211,17 +227,19 @@ img {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     font-family: Vollkorn,serif;
-    font-size: 50px;
+    font-size: 55px;
     font-weight: inherit;
     letter-spacing: .03em;
+    color:rgba(0,0,0,.0);
+    -webkit-text-stroke: 1px #FFF;
 }
 
 @media screen and (max-width:599px) {
-    .top{
+    .mv-ul li{
         border-radius: 0 0 50% 50%/0 0 10% 10%;
     }
     .top-title{
-        font-size: 25px;
+        font-size: 28px;
         white-space: nowrap;
     }
 }
@@ -459,6 +477,260 @@ img {
         font-size: 15px;
     }
 }
+
+
+
+
+
+
+
+
+.swiper{
+    margin-top: 30px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+}
+
+.skills {
+    /* 背景を画像にする際は以下を編集 */
+    /* background: url(../images/skills.pnp) no-repeat center center; */
+    background: #646464;
+    background-size: cover;
+  }
+  
+  .skills__container {
+    padding: 0 2rem;
+  }
+  
+  .skills__item {
+    margin-bottom: 30px;
+  }
+  
+  .skills__block {
+    box-shadow: 0 0 3px 0 rgb(0 0 0 / 12%), 0 2px 3px 0 rgb(0 0 0 / 22%);
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    background: #646464;
+  }
+
+  .skills__circle {
+    margin: 1rem auto 2rem auto;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #4fc3f7;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .skills__circle:hover {
+    cursor: pointer;
+  }
+  
+  .skills__circle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 120px;
+    height: 120px;
+    background: #eef3f7;
+    transform-origin: right 60px;
+    z-index: 2;
+  }
+  
+  .skills__circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 120px;
+    height: 120px;
+    background: #eef3f7;
+    transform-origin: left 60px;
+    z-index: 3;
+  }
+  
+  /* スキルバー回転 クラスはJSで付与 */
+  .skills__circle-90:before {
+    animation: rotate-circle-left-90 2s linear forwards;
+  }
+  .skills__circle-80:before {
+    animation: rotate-circle-left-80 2s linear forwards;
+  }
+  .skills__circle-70:before {
+    animation: rotate-circle-left-70 2s linear forwards;
+  }
+  .skills__circle-60:before {
+    animation: rotate-circle-left-60 2s linear forwards;
+  }
+  .skills__circle-max:after {
+    animation: rotate-circle-right-max 2s linear forwards;
+  }
+  .skills__circle-50:after {
+    animation: rotate-circle-right-50 2s linear forwards;
+  }
+  .skills__circle-40:after {
+    animation: rotate-circle-right-40 2s linear forwards;
+  }
+  .skills__circle-30:after {
+    animation: rotate-circle-right-30 2s linear forwards;
+  }
+  
+  .skills__circle .skills__circle-inner {
+    /* position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4; */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    background: #646464;
+    border-radius: 50%;
+    z-index: 4;
+  }
+  
+  @keyframes rotate-circle-right-max {
+    0% {
+      transform: rotate(0deg);
+      background: #eef3f7;
+    }
+    50% {
+      transform: rotate(180deg);
+      background: #eef3f7;
+    }
+    50.01% {
+      transform: rotate(360deg);
+      background: #4fc3f7;
+    }
+    100% {
+      transform: rotate(360deg);
+      background: #4fc3f7;
+    }
+  }
+  
+  @keyframes rotate-circle-left-90 {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(144deg);
+    }
+  }
+  @keyframes rotate-circle-left-80 {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(108deg);
+    }
+  }
+  @keyframes rotate-circle-left-70 {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(72deg);
+    }
+  }
+  @keyframes rotate-circle-left-60 {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(36deg);
+    }
+  }
+  @keyframes rotate-circle-right-50 {
+    0% {
+      transform: rotate(0deg);
+      background: #eef3f7;
+    }
+    100% {
+      transform: rotate(180deg);
+      background: #eef3f7;
+    }
+  }
+  
+  @keyframes rotate-circle-right-40 {
+    0% {
+      transform: rotate(0deg);
+      background: #eef3f7;
+    }
+    100% {
+      transform: rotate(144deg);
+      background: #eef3f7;
+    }
+  }
+  @keyframes rotate-circle-right-30 {
+    0% {
+      transform: rotate(0deg);
+      background: #eef3f7;
+    }
+    100% {
+      transform: rotate(108deg);
+      background: #eef3f7;
+    }
+  }
+  
+  .skills__name {
+    border-top: dotted 2px #ccc;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 2rem 0 1rem;
+  }
+  
+  .skills__icon img {
+    height: 60px;
+  }
+  
+  .skill_per {
+    position: relative;
+    top: -45px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 2rem;
+    display: none;
+  }
+  
+  .skills__note {
+    font-size: 1.2rem;
+  }
+
+
+
+
+
 
 
 

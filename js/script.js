@@ -8,6 +8,18 @@ $(window).on('load resize', function () {
     }
 });
 
+$(function(){
+    $(".mv-ul li").css({"position":"relative","overflow":"hidden"});
+    $(".mv-ul li").hide().css({"position":"absolute","top":0,"left":0});
+    $(".mv-ul li:first").addClass("fade").show();
+    setInterval(function(){
+      var $active = $(".mv-ul li.fade");
+      var $next = $active.next("li").length?$active.next("li"):$(".mv-ul li:first");
+      $active.fadeOut(2000).removeClass("fade");
+      $next.fadeIn(2000).addClass("fade");
+    },4000);
+  });
+
 
 $('a[href^="#"]').on("click", function () {
     var speed = 300;
@@ -61,27 +73,64 @@ function fadein_blocks(s) {
 fadein_blocks(".works__link");
 
 
-const swiper = new Swiper(".swiper", {
-    // ページネーションが必要なら追加
-    pagination: {
-      el: ".swiper-pagination"
-    },
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "2",
-  
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true
-    },
-  
-    // ナビボタンが必要なら追加
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
+const mySwiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+   
+    // If we need pagination
+    spaceBetween: 10,
+	slidesPerView: 3,
+
+    breakpoints: {
+		600: {
+			slidesPerView: 3,
+		},
+        300:{
+            slidesPerView:2,
+        },
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		clickable: true
+	}
   });
+
+
+  $(window).scroll(function () {
+    $(".skills__circle").each(function () {
+      var i = $(this);
+      t = $(this).offset().top;
+      if ($(window).scrollTop() > t - $(window).height() + 150) {
+        setTimeout(function () {
+          $(i).is('[data-progress="90"]') &&
+            $(i).addClass("skills__circle-90").addClass("skills__circle-max"),
+            $(i).is('[data-progress="80"]') &&
+              $(i).addClass("skills__circle-80").addClass("skills__circle-max"),
+            $(i).is('[data-progress="70"]') &&
+              $(i).addClass("skills__circle-70").addClass("skills__circle-max"),
+            $(i).is('[data-progress="60"]') &&
+              $(i).addClass("skills__circle-60").addClass("skills__circle-max"),
+            $(i).is('[data-progress="50"]') &&
+              $(i).addClass("skills__circle-50"),
+            $(i).is('[data-progress="40"]') &&
+              $(i).addClass("skills__circle-40"),
+            $(i).is('[data-progress="30"]') &&
+              $(i).addClass("skills__circle-30");
+        }, 500);
+      }
+    });
+});
+
+$(".skills__circle").hover(
+    function () {
+      $(this).find(".skill_per").fadeIn();
+    },
+    function () {
+      $(this).find(".skill_per").fadeOut();
+    }
+  );
