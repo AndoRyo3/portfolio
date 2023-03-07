@@ -234,6 +234,7 @@ img {
         position: absolute;
         width: 40px;
         cursor: pointer;
+        display: block;
       }
       .plate {
         height: 41px;
