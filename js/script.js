@@ -1,3 +1,14 @@
+$(window).on('load resize', function () {
+    var window_height = window.innerHeight ? window.innerHeight : $(window).innerHeight();
+    var window_width = window.innerWidth ? window.innerWidth : $(window).width();
+    if (window_width <= 768) {
+        $('.top').css('height', '600px');
+    } else {
+        $('.top').css('height', '670px');
+    }
+});
+
+
 $('a[href^="#"]').on("click", function () {
     var speed = 300;
     var href = $(this).attr("href");
