@@ -826,6 +826,12 @@ img {
     line-height: 1;
     padding: 2rem 0 1rem;
   }
+
+  @media screen and (max-width:599px) {
+    .skills__name{
+      font-size: 17px;
+    }
+  }
   
   .skills__icon img {
     height: 60px;
