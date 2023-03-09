@@ -1112,7 +1112,7 @@ img {
     opacity: .5;
   }
 
-  .fa-regular, .far {
+.fa-regular, .far {
     font-weight: bold;
 }
 
