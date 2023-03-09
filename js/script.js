@@ -60,7 +60,13 @@ $(function () {
     });
 });
 
-
+$(function(){
+    $('.menu-trigger').on('click', function() {
+      $(this).toggleClass('active');
+      $('.sp-nav').toggleClass('toggle')
+      return false;
+    });
+  });
 function fadein_blocks(s) {
     $(window).scroll(function () {
         $(s).each(function (s) {
