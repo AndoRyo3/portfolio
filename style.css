@@ -647,6 +647,7 @@ img {
 @media screen and (max-width:599px){
     .works-flex{
         justify-content: center;
+        margin-top: 40px;
     }
     .works-card{
         width: 95%;
