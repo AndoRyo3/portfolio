@@ -312,22 +312,17 @@ img {
 .item {
   position: relative;
   width: 33.33334%;
-  /* height: 200px;
-  padding-top: 80px; */
   text-align: center;
   box-sizing: border-box;
   counter-increment: item;
+  display: none;
 }
-@media only screen and (max-width: 768px) {
-  .list {
-    display: block;
-  }
+@media only screen and (max-width: 599px) {
   .item {
     width: auto;
+    display: block;
   }
 }
-
-
 
 .menu-trigger,
 .menu-trigger span {
@@ -344,7 +339,14 @@ img {
   appearance: none;
   cursor: pointer;
   z-index: 100;
+  display: none;
 }
+@media only screen and (max-width: 599px) {
+  .menu-trigger {
+    display: block;
+  }
+}
+
 .menu-trigger span {
   position: absolute;
   left: 0;
