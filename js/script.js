@@ -1,4 +1,4 @@
-
+// ローディング画面
 var loading = $("#js-loading");
 $(window).on("load", function () {
     var windowHeight = $(window).height();
@@ -11,7 +11,7 @@ setTimeout(function () {
 }, 8000);
 
 
-
+// トップ画面の高さ調整
 $(window).on('load resize', function () {
     var window_height = window.innerHeight ? window.innerHeight : $(window).innerHeight();
     var window_width = window.innerWidth ? window.innerWidth : $(window).width();
@@ -22,6 +22,8 @@ $(window).on('load resize', function () {
     }
 });
 
+
+// main-visualのスライドショー
 $(function () {
     $(".mv-ul li").css({ "position": "relative", "overflow": "hidden" });
     $(".mv-ul li").hide().css({ "position": "absolute", "top": 0, "left": 0 });
@@ -35,6 +37,7 @@ $(function () {
 });
 
 
+// リンククリック時の移動の動作
 $('a[href^="#"]').on("click", function () {
     var speed = 300;
     var href = $(this).attr("href");
@@ -60,6 +63,8 @@ $('a[href^="#"]').on("click", function () {
 //     });
 // });
 
+
+// ハンバーガーメニュー
 $(function () {
     const ham = $('.menu-trigger, .sp-link')
     ham.on('click', function () {
@@ -69,6 +74,8 @@ $(function () {
     });
 });
 
+
+// 要素のフェードインの動作
 function fadein_blocks(s) {
     $(window).scroll(function () {
         $(s).each(function (s) {
@@ -95,6 +102,7 @@ function fadein_blocks(s) {
 fadein_blocks(".works__link");
 
 
+// Swiper
 const mySwiper = new Swiper('.swiper', {
     loop: true,
     spaceBetween: 10,
@@ -120,6 +128,7 @@ const mySwiper = new Swiper('.swiper', {
 });
 
 
+// skillsの円の動作
 $(window).scroll(function () {
     $(".skills__circle").each(function () {
         var i = $(this);
@@ -145,6 +154,8 @@ $(window).scroll(function () {
     });
 });
 
+
+// skills hover時にパーセンテージの表示動作
 $(".skills__circle").hover(
     function () {
         $(this).find(".skill_per").fadeIn();
@@ -154,6 +165,8 @@ $(".skills__circle").hover(
     }
 );
 
+
+// ページトップボタンの動作
 $(function () {
     var pagetop = $('#page-top');
     pagetop.hide();
@@ -170,6 +183,8 @@ $(function () {
     });
 });
 
+
+// ヘッダーの高さ調整
 $(window).scroll(function () {
     if ($(this).scrollTop() > 400) {
         $('.header').addClass('is-active')
