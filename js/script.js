@@ -50,19 +50,20 @@ $('a[href^="#"]').on("click", function () {
     return false;
 });
 
-$(function () {
-    const hum = $('.plate, .close, .sp-link')
-    const nav = $('.sp-nav')
-    hum.on('click', function () {
-        nav.toggleClass('toggle');
-        $('.plate').toggleClass('active');
-        return false;
-    });
-});
+// $(function () {
+//     const hum = $('.plate, .close, .sp-link')
+//     const nav = $('.sp-nav')
+//     hum.on('click', function () {
+//         nav.toggleClass('toggle');
+//         $('.plate').toggleClass('active');
+//         return false;
+//     });
+// });
 
 $(function () {
-    $('.menu-trigger').on('click', function () {
-        $(this).toggleClass('active');
+    const ham = $('.menu-trigger, .sp-link')
+    ham.on('click', function () {
+        $('.menu-trigger').toggleClass('active');
         $('.sp-nav').toggleClass('toggle')
         return false;
     });
