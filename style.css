@@ -560,6 +560,25 @@ img {
     }
 }
 
+.newFlag{
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
+}
+
+@keyframes fuwafuwa {
+  0% {
+    transform:translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform:translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(7deg);
+  }
+}
+
 .works-flex{
     display: flex;
     flex-wrap: wrap;
@@ -688,6 +707,16 @@ img {
 .profile-detail p{
     font-size: 18px;
     margin: 10px;
+}
+
+.have-skill{
+  padding: 0 35px;
+}
+
+.have-skill li{
+  list-style: initial;
+  margin-bottom: 5px;
+  font-size: 15px;
 }
 
 .sns-link{
