@@ -175,7 +175,7 @@ img {
     display: none;
 }
 
-.sp-link {
+.sp-link ,.sp-link2 {
     text-transform: uppercase;
 }
 
