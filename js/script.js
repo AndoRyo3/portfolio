@@ -80,7 +80,7 @@ function fadein_blocks(s) {
     $(window).scroll(function () {
         $(s).each(function (s) {
             var i = $(this).offset().top;
-            $(window).scrollTop() > i - $(window).height() + 100 &&
+            $(window).scrollTop() > i - $(window).height() &&
                 $(this)
                     .delay(300 * s)
                     .queue(function () {
@@ -93,7 +93,7 @@ function fadein_blocks(s) {
     $(window).scroll(function () {
         $(s).each(function () {
             var s = $(this).offset().top;
-            $(window).scrollTop() > s - $(window).height() + 100 &&
+            $(window).scrollTop() > s - $(window).height() &&
                 $(this).addClass("is-fadein");
         });
     });
