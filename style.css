@@ -737,6 +737,9 @@ img {
     margin-bottom: 10px;
     text-decoration: none;
     color: #00BCD4;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
 }
 
 .works-card .description a:after {
