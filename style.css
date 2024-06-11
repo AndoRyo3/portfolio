@@ -997,6 +997,10 @@ img {
     color: white;
 }
 
+.line-through{
+    text-decoration: line-through;
+}
+
 @media screen and (max-width:599px) {
     .profile-flex {
         flex-direction: column;
